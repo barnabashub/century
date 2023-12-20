@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function fetchData() {
     // Example: Fetch data from the backend
-    fetch('/api/pushups')  // Adjust the URL based on your Flask routes
+    fetch('https://barnabs.pythonanywhere.com/api/pushups')  // Adjust the URL based on your Flask routes
         .then(response => response.json())
         .then(data => {
             // Handle the fetched data
@@ -34,7 +34,7 @@ function fetchData() {
 
 function addPushups(formData) {
     // Example: Send data to the backend to add new pushups
-    fetch('https://barnabs.pythonanywhere.com//add', {
+    fetch('https://barnabs.pythonanywhere.com/add', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
