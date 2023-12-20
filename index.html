@@ -38,6 +38,7 @@
 
         <h2>Add New Pushups</h2>
         <form method="post" action="{{ url_for('add_pushups') }}">
+            {{ csrf_token() }}
             <div class="form-group">
                 <label for="new-date">Date:</label>
                 <input type="datetime-local" class="form-control" id="new-date" name="date" required>

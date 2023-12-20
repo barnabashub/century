@@ -36,6 +36,10 @@ function addPushups(formData) {
     // Example: Send data to the backend to add new pushups
     fetch('/add', {
         method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': getCookie('Almafa123')
+        },
         body: formData,
     })
         .then(response => response.json())
@@ -46,4 +50,10 @@ function addPushups(formData) {
         .catch(error => {
             console.error('Error adding pushups:', error);
         });
+}
+
+function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
 }
