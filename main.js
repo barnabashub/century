@@ -34,7 +34,7 @@ function fetchData() {
 
 function addPushups(formData) {
     // Example: Send data to the backend to add new pushups
-    fetch('/add', {
+    fetch('https://barnabs.pythonanywhere.com//add', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
