@@ -34,6 +34,21 @@
                 {% endfor %}
             </tbody>
         </table>
+
+        <h2>Add New Pushups</h2>
+        <form method="post" action="{{ url_for('add_pushups') }}">
+            <div class="form-group">
+                <label for="new-date">Date:</label>
+                <input type="datetime-local" class="form-control" id="new-date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label for="new-amount">Amount:</label>
+                <input type="number" class="form-control" id="new-amount" name="amount" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Pushups</button>
+        </form>
+    </div>
+
     </div>
     <!-- Include Bootstrap JS and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
