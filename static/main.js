@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function fetchData() {
     // Example: Fetch data from the backend
-    fetch('https://barnabs.pythonanywhere.com/')  // Adjust the URL based on your Flask routes
+    fetch('https://barnabs.pythonanywhere.com/api/pushups')  // Adjust the URL based on your Flask routes
         .then(response => response.json())
         .then(data => {
             // Handle the fetched data
